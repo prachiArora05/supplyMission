@@ -7,7 +7,7 @@ const Body = Matter.Body;
 
 function preload() {
 	helicopterImage = loadImage("Images/helicopter.png");
-	packageImage = loadImage("Images/package.png")
+	packageImage = loadImage("Images/package.png");
 }
 
 function setup() {
@@ -31,7 +31,6 @@ function setup() {
 	packageBody = Bodies.circle(width/2, 200, 5, {restitution: 0.2, isStatic: true});
 	World.add(world, packageBody);
 
-	//Create a Ground
 	ground = Bodies.rectangle(width/2, 650, width, 10, {isStatic: true});
  	World.add(world, ground);
 
@@ -58,7 +57,6 @@ function setup() {
 
 	Engine.run(engine);
 }
-
 
 function draw() {
   rectMode(CENTER);
